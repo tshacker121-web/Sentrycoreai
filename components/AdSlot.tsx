@@ -9,10 +9,14 @@ export function AdSlot({
 }) {
   return (
     <div
-      className={`min-h-[280px] w-full flex items-center justify-center bg-slate-900/50 border border-slate-800 rounded-lg ${className}`}
+      className={`w-full flex items-center justify-center ${className}`}
       data-ad-slot={slot}
     >
-      <div className="text-slate-600 text-sm font-mono">
+      {/* We removed the min-height, background, and borders.
+          The div is now "invisible" but stays in the DOM 
+          so the AdSense bot can still find the data-ad-slot attribute.
+      */}
+      <div className="hidden">
         Ad Space - {slot}
       </div>
     </div>
