@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: var(--font-inter);
+    --font-mono: var(--font-jetbrains);
+    --background: 222 47% 11%;
+    --foreground: 0 0% 100%;
+    --card: 217 33% 17%;
+    --card-foreground: 0 0% 100%;
+    --popover: 217 33% 17%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 187 77% 58%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 84 81% 69%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 187 77% 58%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
+    --ring: 187 77% 58%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-slate-950 text-foreground;
+    font-family: var(--font-sans);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer components {
+  .cyber-grid {
+    background-image:
+      linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+  }
+
+  .glow-lime {
+    box-shadow: 0 0 20px rgba(190, 242, 100, 0.3);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+  }
+}
